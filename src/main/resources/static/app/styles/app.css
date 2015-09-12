@@ -2,14 +2,14 @@
 
 .day {
 	background-color: #C2E8FD;
-	background-image: url("../img/lake.jpg");
+	background-image: url("./img/lake.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
 }
 
 .math {
 	background-color: #0D0C0A;
-	background-image: url("../img/field.jpg");
+	background-image: url("./img/field.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
 }
