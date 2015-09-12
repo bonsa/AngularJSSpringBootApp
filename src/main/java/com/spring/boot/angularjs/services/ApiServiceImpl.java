@@ -16,27 +16,27 @@ import com.spring.boot.angularjs.model.MathResponse;
 public class ApiServiceImpl implements ApiService
 {
 
-    static final Logger log = Logger.getLogger(ApiServiceImpl.class);
+    static final Logger  log = Logger.getLogger(ApiServiceImpl.class);
 
-    public DayResponse getFactAboutDay(String day, String month)
+    private RestTemplate restTemplate;
+
+    ApiServiceImpl()
     {
-
-        RestTemplate restTemplate = new RestTemplate();
+        restTemplate = new RestTemplate();
         List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
         interceptors.add(new ApiInterceptor());
         restTemplate.setInterceptors(interceptors);
+    }
+
+    public DayResponse getFactAboutDay(String day, String month)
+    {
         DayResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{month}/{day}/date?fragment=true&json=true", DayResponse.class, month, day);
 
         return response;
     }
-    
+
     public MathResponse getMathPropertyAboutNumber(String number)
     {
-
-        RestTemplate restTemplate = new RestTemplate();
-        List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
-        interceptors.add(new ApiInterceptor());
-        restTemplate.setInterceptors(interceptors);
         MathResponse response = restTemplate.getForObject("https://numbersapi.p.mashape.com/{number}/math?fragment=true&json=true", MathResponse.class, number);
 
         return response;
