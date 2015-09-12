@@ -1,0 +1,119 @@
+/* app css stylesheet */
+
+.day {
+	background-color: #C2E8FD;
+	background-image: url("../img/lake.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.math {
+	background-color: #0D0C0A;
+	background-image: url("../img/field.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.menu {
+    text-align: center;
+    list-style: none;
+    padding: 0 0 0.5em;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+body {
+	font-size: 25px;
+}
+
+.form-horizontal-header {
+	color: white;
+	margin-top: 60px;
+	font-size: 30px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.form-horizontal-form {
+	color: white;
+	margin-top: 40px;
+}
+
+.inline-div {
+	display: inline;
+}
+
+.div-width {
+	width: 40%;
+}
+
+label[for="day"].form-horizontal-label , label[for="month"].form-horizontal-label, label[for="number"].form-horizontal-label  {
+	width: 120px;
+	font-size: 25px;
+	text-align: left;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+input[type="text"].form-horizontal-input {
+	background: transparent; 
+	color: white; 
+	width: 40px;
+	display: inline;
+	text-align: right;
+	font-weight: bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 15px;
+}
+
+.form-horizontal-div-button {
+	margin-top: 20px;
+}
+
+.form-horizontal-div-display {
+	background-color: rgba(255, 255, 255, 0.4);
+	display: block;
+	padding: 5px 10px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 20px;
+	line-height: 110%;
+	font-size: x-large;
+	padding-top: 10px;
+}
+
+div[role="alert"] {
+	color: #FFD3D3;
+	font-weight: bold;
+	padding-left: 10px;
+	font-size: 20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	padding-top: 5px;
+	float:right;
+}
